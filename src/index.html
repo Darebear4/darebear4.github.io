@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Add an appropriate title in this tag -->
+  <title>Lab 1A</title>
+  <!-- Links to stylesheets -->
+  
+<link rel="stylesheet" href="css/style.css"/>
+
+</head>
+
+
+
+    <body>
+
+        <header>
+             <h1>Welcome to My Website!</h1>
+        </header>
+        <main>
+            <nav>
+                <a href="oldindex.html">Old Version</a>
+                |
+                <a href="about.html">About</a>
+            </nav>
+            <main>
+                <p>Welcome to my To-Do List website!</p>
+                
+                <h2 id = 'title'>To-Do List</h2>
+                <input type="checkbox" onchange = "updateTask(this.id)" class="toggle-switch" id="sort"/><label for="cb-sort">Sort by Date</label>
+
+                <input type="checkbox" onchange = "updateTask(this.id)" class="toggle-switch" id = "filter" /><label>Filter completed tasks</label><br/><br/>
+                
+                <table>
+                    <thead>
+                  <tr>
+                    <th id="center-done-column" ><span class="material-icon" >done_outline</span></th>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th id="center-delete-column"><span class="material-icon" >delete_forever</span></th>
+                  </tr>
+                </thead>
+                <tbody id ='table-body'>
+                    <tr>
+                        <td><input type='checkbox' class='checkbox-icon'></td>
+                        <td><span>Add filters</span></td>
+                        <td><span>01-09-2026</span></td>
+                        <td><button type="button" id='trash' class="material-icon">delete_forever</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type='checkbox' class='checkbox-icon'></td>
+                        <td><span>Submit this lab</span></td>
+                        <td><span>01-13-2026</span></td>
+                        <td><button type="button" id='trash' class="material-icon">delete_forever</button></td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <br/>
+                <form onsubmit="createTask(event)">
+                  <input class='newTask' type='text' placeholder='New task...' id="task" required/><br/>
+                  <input class='newDate' type='date' id="date" required/><br/>
+                  <button class='addTask' type='submit'>Add Task</button>
+                </form>
+            </main>
+        <script src="js/newscript.js"></script>
+    </body>
+</html>

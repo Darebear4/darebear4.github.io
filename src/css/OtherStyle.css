@@ -1,0 +1,45 @@
+header {
+	/* Make header stay at the top of the browser window */
+	text-align: center;
+}
+
+
+main {
+    /* Make main relative, not static so that 'absolutely' positioned children will be relative to its anchor. */
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    width: calc(25% - 1rem);
+	text-align: center;
+}
+
+nav.bar-header {
+	font-weight: bold;
+	font-size: 2em;
+	margin-bottom: 0.5em;
+}
+
+article {
+    position: absolute;
+    left: 25%;
+    width: calc(50% - 1rem);
+    max-height: calc(100vh - 12rem);
+    overflow-y: auto;
+}
+
+aside {
+    position: absolute;
+    left: 75%;
+    width: calc(25% - 1rem);
+	text-align: center;
+}
+
+footer {
+    /* Locate this at the bottom of the browser window */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+	text-align: center;
+}
