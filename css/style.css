@@ -13,10 +13,11 @@ to all elements unless they are overridden. */
 	--delete: rgb(209, 0, 0);
 	--primary-text: #000000;
 	--background: rgb(0, 0, 0);
+	--lightBackground: rgb(200, 200, 200);
 
 	/* Window background and default font */
-    background-color: rgb(200, 200, 200);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* These rules with element selectors apply to all elements of the corresonding names. In a sense, they
@@ -176,7 +177,7 @@ input.toggle-switch:after {
     position: absolute;	    /* Absolute positioning without left and top locates this exactly on top of the input.toggle-switch */
 	width: 1.4em;           /* Width and height of the oval */
 	height: 0.6em;
-	background-color: rgb(128,128,128); /* Light gray fill */
+	/*background-color: rgb(128,128,128);  Light gray fill */
 	border-radius: 0.3em;   /* Border radius of half the height makes this an oval instead of a rectangle */
 }
 
@@ -204,7 +205,7 @@ input.toggle-switch:checked:before {
 	box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.6); /* When turned on, cast the shadow the other direction */
 }
 
-/* Change the background color to green when turned on */
+/* Change the background color to maroon when turned on */
 input.toggle-switch:checked:after {
 	background-color: var(--accent);
 }
@@ -232,6 +233,7 @@ td {
 	font-size: 1rem;
 	color: #000000;
 }
+
 .checkbox-icon {
 	width: 1em;
 	color: var(--accent);
@@ -282,22 +284,93 @@ button.addTask {
 	}
 	
 	nav {
-    color: black;				/* Nav bar is white on very dark gray */
+    color: black; 				/* For the lines between links */
     background-color: var(--accent);
     padding: 0.75rem;			  /* Give the nav bar some internal padding */
 	border-radius: 4px;
 	}
 
 	nav a {
-    	color: darkgray;		/* Links in the nav bar are light blue instead of white */
+    	color: rgb(175, 175, 175);		/* color of the actual links */
     	text-decoration: none;		  /* Don't underline links in the nav bar */
 	}
 
 	label {
-		color: gray;
+		color: black;
 	}
 
 	form input {
 		background-color: var(--primary);
 	}
+
+	input.newTask, input.newDate {
+		background-color: gray;
+	}
+
+	input::placeholder {
+		color: black;
+		opacity: .6;
+	}
+
+		input.toggle-switch:after {	
+		background-color: darkgray;
+	}
+
+
+}
+
+
+
+
+@media (prefers-color-scheme: light) {
+	/*--primary: white;*/
+	html {
+		background-color: white;
+	}
+	
+	body {
+		background-color: gray;
+		color: black;
+	}
+	
+	h1 {
+		background-color: gray;
+		color: black;
+	}
+	
+	nav {
+    color: var(--primary);				/* Nav bar is white on very dark gray */
+    background-color: var(--accent);
+    padding: 0.75rem;			  /* Give the nav bar some internal padding */
+	border-radius: 4px;
+	}
+
+	nav a {
+    	color: lightgray;		/* Links in the nav bar are light blue instead of white */
+    	text-decoration: none;		  /* Don't underline links in the nav bar */
+	}
+
+	label {
+		color: black;
+	}
+
+	form input {
+		background-color: white;
+		color: black;
+	}
+
+	input.newTask, input.newDate {
+		color: black;
+	}
+
+	input.toggle-switch:after {	
+		background-color: white;
+	}
+
+	
+	.task-done {
+		text-decoration: line-through;
+		color: white;
+	}
+
 }
