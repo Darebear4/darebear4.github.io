@@ -12,10 +12,10 @@ to all elements unless they are overridden. */
 	--accent: #531c1c;
 	--delete: rgb(209, 0, 0);
 	--primary-text: #000000;
-	--background: rgb(46, 46, 46);
+	--background: rgb(0, 0, 0);
 
 	/* Window background and default font */
-    background-color: rgb(46, 46, 46);
+    background-color: rgb(200, 200, 200);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -298,6 +298,6 @@ button.addTask {
 	}
 
 	form input {
-		background-color: black;
+		background-color: var(--primary);
 	}
 }
