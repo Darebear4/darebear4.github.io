@@ -268,17 +268,17 @@ button.addTask {
 
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: black;
-		color: var(--primary);
+		background-color: var(--primary);
+		color: black;
 	}
 	
 	h1 {
-		background-color: black;
-		color: var(--primary);
+		background-color: var(--primary);
+		color: black;
 	}
 	
 	nav {
-    color: var(--primary);				/* Nav bar is white on very dark gray */
+    color: black;				/* Nav bar is white on very dark gray */
     background-color: var(--accent);
     padding: 0.75rem;			  /* Give the nav bar some internal padding */
 	border-radius: 4px;
@@ -294,6 +294,6 @@ button.addTask {
 	}
 
 	form input {
-		background-color: var(--primary);
+		background-color: black;
 	}
 }
